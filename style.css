@@ -1,0 +1,357 @@
+body{
+    overflow: hidden;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button{
+    outline: none;
+}
+
+video{
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-class{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.btn-class button{
+    width: fit-content;
+    min-height: 50px;
+    max-height: fit-content;
+    font-size: 1.5em;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 15px;
+    background-color: #a63636;
+    color: #fff;
+    outline: none;
+    box-shadow: 1px 1px 5px 0 black;
+}
+
+.btn button{
+    width: fit-content;
+    min-height: 30px;
+    max-height: fit-content;
+    font-size: 1.2em;
+    padding: 0 5px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 5px;
+    background-color: #a63636;
+    color: #fff;
+    outline: none;
+}
+
+
+button:hover{
+     filter: brightness(120%);
+}
+
+
+.clock-container,.stop-watch-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 0 25px;
+    
+}
+
+
+.countdown-container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 0 25px;
+    z-index: 8;
+
+}
+
+
+.clock-container-inner, .stop-watch-inner{
+    width: 600px;
+    min-height: 250px;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    border-radius: 10px;
+    color: #1b6ca8;
+    font-size: 2em;
+}
+
+.countdown-inner{
+    width: 600px;
+    min-height: 250px;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    border-radius: 10px;
+    color: #1b6ca8;
+    font-size: 2em; 
+    display: none;
+    padding: 10px;
+}
+
+.main-countdown{
+    width: 600px;
+    min-height: 200px;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 8;
+    border-radius: 10px;
+    color: #1b6ca8;
+    font-size: 2em;
+    display: none;
+    padding: 10px;
+}
+
+.countdown-complete{
+    width: 600px;
+    min-height: 125px;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+    border-radius: 10px;
+    color: #1b6ca8;
+    font-size: 2em;
+    display: none;
+    padding: 10px;
+}
+
+
+.main-countdown ul{
+   display: flex;
+   width: 100%;
+   justify-content: space-evenly;
+}
+
+ul li{
+  list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #a63636;
+}
+
+ul li span{
+    color: #1b6ca8;
+}
+
+
+.stop-watch-container{
+    display: none;
+    z-index: 5;
+}
+
+
+.stop-watch-container-button{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0;
+}
+
+
+
+.stop-watch-container-button button{
+    font-size: 0.8em;
+    border: none;
+    background-color: #1b6ca8;
+    padding: 0 5px;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+
+.form-group{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.form-group input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #1b6ca8;
+    outline: none;
+    padding: 0 5px;
+    text-align: left;
+}
+
+#countdown-start, #countdown-button, #new-countdown{
+    min-width: 75px;
+    font-size: 0.8em;
+    margin: 15px 0 0;
+    border: none;
+    background-color: #1b6ca8;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+
+#countdown-title, .countdown-complete h3{
+    font-size: 25px;
+}
+
+.countdown-complete h3{
+    animation: colorful 4s linear infinite;
+}
+
+
+@keyframes colorful{
+    0%{
+
+          transform: scale(1.2);
+    }
+    25%{
+         
+           transform: scale(1);
+    }
+    50%{
+            
+            transform: scale(1.2);
+    }
+    75%{
+         
+          transform: scale(1);
+    }
+    100%{
+      
+         transform: scale(1.2);
+    }
+}
+
+
+
+@media screen and (max-width:767px){
+    .btn-class{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .clock-container-inner, .stop-watch-inner, .countdown-inner,.countdown-complete{
+        font-size: 1.5em;
+    }
+
+    .countdown-complete{
+        width: 100%;
+       min-height: 100px;
+    }
+}
+
+
+
+@media screen and (max-width:567px){
+    .clock-container-inner, .stop-watch-inner, .countdown-inner, .countdown-complete, .main-countdown{
+        font-size: 1.2em;
+        min-height: 75px;
+    }
+
+    .countdown-complete{
+        font-size: 1em;
+    }
+
+    .main-countdown ul{
+        flex-direction: column;
+     }
+
+
+}
+
+
+@media screen and (max-width:367px){
+    .clock-container-inner, .stop-watch-,.countdown-inner{
+        font-size: 1em;
+    }
+    .countdown-complete{
+        font-size: 0.8em;
+    }
+
+}
+
+
+
+@media screen and (max-width:300px){
+    .clock-container-inner, .stop-watch-inner,.countdown-inner{
+        font-size: 0.8em;
+    }
+
+    .countdown-complete{
+        font-size: 0.5em;
+    }
+}
+
+
+@media screen and (max-width:267px){
+    .clock-container-inner, .stop-watch-inner,.countdown-inner{
+        font-size: 0.7em;
+    }
+
+    .countdown-complete{
+        font-size: 0.4em;
+    }
+}
+

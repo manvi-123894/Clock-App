@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Clock App</title>
+</head>
+<body>
+
+    
+
+
+    <div class="container">
+
+        <video class="background-video" muted loop autoplay>
+            <source src="Video/Time - 6358.mp4" type="">
+        </video>
+
+        <div class="btn-class">
+
+            <div class="clock">
+                <button id="clock">Clock</button>
+            </div>
+
+            <div class="stop-watch">
+                <button id="stop-btn">Stop Watch</button>
+            </div>
+    
+           
+    
+            <div class="countdown">
+                <button id="countdown">Countdown</button>
+            </div>
+        </div>
+
+        <div class="clock-container">
+            <div class="clock-container-inner">
+
+               
+
+                <h1>
+                    <span class="time-elements">00</span>
+                    <span>:</span>
+                    <span class="time-elements">00</span>
+                    <span>:</span>
+                    <span class="time-elements">00</span>
+
+                    <span class="am-pm">AM</span>
+                </h1>
+
+                <div class="btn">
+                    <button id="home">Home</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="stop-watch-container">
+
+          
+
+            <div class="stop-watch-inner">
+                <h1>
+                    <span class="stop-elements" id="hour">00</span>
+                    <span>:</span>
+                    <span class="stop-elements" id="min">00</span>
+                    <span>:</span>
+                    <span class="stop-elements" id="sec">00</span>
+                    <span>:</span>
+                    <span class="stop-elements" id="mili">00</span>        
+                </h1>
+
+                <div class="stop-watch-container-button">
+                    <button id="stop">Start</button>
+                    <!-- <button id="save">Save</button> -->
+                    <button id="reset">Reset</button>
+                </div>
+
+                <div class="btn">
+                    <button id="stop-home">Home</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="countdown-container">
+            <div class="countdown-inner">
+
+                <h3>Custom Countdown</h3>
+
+                <form action="" id="form">
+    
+                    <div class="form-group">
+                        <label for="">Title</label>
+                        <input required type="text" name="" id="title">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="">Date</label>
+                        <input required type="date" min="" name="" id="date">
+                    </div>
+                   
+                    <button  type="submit" id="countdown-start">Start</button>
+
+                </form>
+
+                <div class="btn">
+                    <button id="count-home">Home</button>
+                </div>
+            </div>
+
+            <div class="main-countdown">
+                <h3 id="countdown-title">Countdown Title</h3>
+                <ul>
+                    <li><span class="span">00</span> Days</li>
+                    <li><span class="span">00</span> Hours</li>
+                    <li><span class="span">00</span> Minutes</li>
+                    <li><span class="span">00</span> Seconds</li>
+                </ul>
+
+                <button type="reset" id="countdown-button">Reset</button>
+
+                <div class="btn">
+                    <button class="count-home">Home</button>
+                </div>
+            </div>
+
+            <div class="countdown-complete">
+                <h3><span class="countdown-name"></span><br> completed on <br> <span id="complete"></span></h3>
+             
+                <div class="btn">
+                    <button type="reset" id="new-countdown">Home</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+  
+
+    <script src="clock.js"></script>
+    <script src="stopwatch.js"></script>
+    <script src="countdown.js"></script>
+</body>
+</html>
