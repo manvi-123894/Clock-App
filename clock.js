@@ -1,4 +1,4 @@
-alert("Please Select 1 at a time ☺");
+
 
 
 const clockBtn = document.querySelector("#clock");
