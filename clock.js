@@ -1,6 +1,3 @@
-
-
-
 const clockBtn = document.querySelector("#clock");
 const clockContainer = document.querySelector(".clock-container");
 const btnClass = document.querySelector(".btn-class"); 
